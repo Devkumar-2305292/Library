@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Optional: centers content vertically */
+      }
+
+      .container {
+        background-color: #ecf0f1;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px black;
+        display: block;
+        padding: 12px 32px;
+        max-width: 350px;
+        margin: 40px auto;
+      }
+
+      .container h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .container label {
+        display: block;
+        margin-top: 14px;
+        margin-bottom: 6px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container input[type="text"] {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      .library {
+        border: 2px solid black;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px black;
+        width: 400px;
+        background: #fff;
+        margin-top: 32px;
+        padding: 16px 0 24px 0;
+
+        text-align: center;
+      }
+
+      .library-table {
+        display: table;
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      .library-row {
+        display: table-row;
+      }
+
+      .library-header {
+        font-weight: bold;
+        background: #3498db;
+        color: #fff;
+      }
+
+      .library-cell {
+        display: table-cell;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Optional: Add hover effect for rows */
+      .library-row:not(.library-header):hover {
+        background: #f1f1f1;
+      }
+
+      #submit {
+        border-radius: 8px;
+        box-shadow: 2px 2px 3px black;
+        margin-top: 16px;
+        padding: 8px 16px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      #submit:hover{
+        background-color: #4d7793;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>New Book</h2>
+      <label for="title">Title:</label>
+      <input type="text" placeholder="Title" />
+      <label for="author">Author:</label>
+      <input type="text" placeholder="Author" />
+      <label for="pages">Pages:</label>
+      <input type="text" placeholder="Pages" />
+      <input type="checkbox" name="read" id="read" />
+      <label for="read" style="display: inline; font-weight: normal"
+        >I have read this book</label
+      >
+
+      <button id="submit" type="submit">Save Me</button>
+    </div>
+
+    <div class="library">
+      <h2>Library</h2>
+      <div class="library-table">
+        <div class="library-row library-header">
+          <div class="library-cell">Title</div>
+          <div class="library-cell">Author</div>
+          <div class="library-cell">Pages</div>
+          <div class="library-cell">Read</div>
+          <div class="library-cell">Remove</div>
+          <!-- <div class="library-cell">Read Me</div> -->
+        </div>
+        <!-- Book rows will go here -->
+      </div>
+    </div>
+
+    <script src="excercise.js"></script>
+  </body>
+</html>
